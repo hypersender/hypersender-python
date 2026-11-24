@@ -11,7 +11,7 @@
 The official Python SDK for the [Hypersender](https://hypersender.com) **WhatsApp API**, **SMS API**, and **OTP API**. Send WhatsApp messages, build a WhatsApp bot in Python, send SMS from your own Android phone, and verify users with one-time codes, in a few lines of code.
 
 - Plain methods with keyword arguments that return plain dictionaries
-- One dependency ([httpx](https://www.python-httpx.org/)), fully typed, Python 3.9+
+- One dependency ([httpx](https://www.python-httpx.org/)), fully typed, Python 3.10+
 - Works with Django, Flask, FastAPI, or a simple script
 
 ## Installation
