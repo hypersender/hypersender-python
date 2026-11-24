@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hypersender"
+dynamic = ["version"]
+description = "Official Python SDK for the Hypersender WhatsApp API, SMS API, and OTP API."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Hypersender", email = "info@hypersender.com" }]
+requires-python = ">=3.9"
+dependencies = ["httpx>=0.25,<1"]
+keywords = ["hypersender", "whatsapp", "whatsapp api", "whatsapp bot", "sms", "sms api", "otp", "sdk"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Communications :: Chat",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://hypersender.com"
+Documentation = "https://docs.hypersender.com/v2/packages-and-sdks/python/installation"
+Repository = "https://github.com/hypersender/hypersender-python"
+Changelog = "https://github.com/hypersender/hypersender-python/blob/main/CHANGELOG.md"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.version]
+path = "src/hypersender/__init__.py"
